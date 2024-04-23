@@ -6,47 +6,98 @@
     <title>Document</title>
     <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <!-- Bootsrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Particle js -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
       type="text/javascript"
     ></script>
-    <!-- textillate  -->
+
+    <!-- Texllate  -->
     <link rel="stylesheet" href="assets/textillate/animate.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section id="oval" class="mb-4">
-      <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-10">
-          <div
-            class="d-flex justify-content-center align-items-center"
-            style="height: 80vh"
-          >
-            <canvas
-              id="canvasOne"
-              width="700"
-              height="420"
-              style="position: absolute"
-            ></canvas>
-            <div id="Jarvis">
-              <div class="square">
-                <span class="circle"></span>
-                <span class="circle"></span>
-                <span class="circle"></span>
+    <div class="container">
+      <section id="oval" hidden class="mb-4">
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <div
+              class="d-flex justify-content-center align-items-center"
+              style="height: 80vh"
+            >
+              <canvas
+                id="canvasOne"
+                width="700"
+                height="420"
+                style="position: absolute"
+              ></canvas>
+              <div id="Jarvis">
+                <div class="square">
+                  <span class="circle"></span>
+                  <span class="circle"></span>
+                  <span class="circle"></span>
+                </div>
+              </div>
+            </div>
+            <h5 class="text-light text text-center">Ask me anything</h5>
+            <div class="col-md-12 mt-4 p-4">
+              <div class="text-center">
+                <div id="TextInput" class="d-flex">
+                  <input
+                    class="input-field"
+                    type="text"
+                    name="chat"
+                    id="chatbox"
+                    placeholder="Message Jarvis..."
+                  />
+                  <button id="mic-btn" class="glow-on-hover">
+                    <i class="bi bi-mic-fill"></i>
+                  </button>
+                  <button id="chat-btn" class="glow-on-hover">
+                    <i class="bi bi-chat-fill"></i>
+                  </button>
+                  <button id="settings-btn" class="glow-on-hover">
+                    <i class="bi bi-gear-fill"></i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-          <h5 class="text-light text text-center">Ask me anything</h5>
+          <div class="col-md-1"></div>
         </div>
-        <div class="col-md-1"></div>
-      </div>
-    </section>
+      </section>
+      <section id="SiriWave">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div
+                class="d-flex justify-content-center align-items-center"
+                style="height: 100vh"
+              >
+                <div>
+                  <p class="text-light text-start mb-4 siri-message">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing
+                  </p>
+                  <div id="siri-container"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
     <script
@@ -56,12 +107,30 @@
     ></script>
     <script src="script.js"></script>
 
-    <!-- textillate -->
+    <!--Jquery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Particle js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Siri wave -->
+    <script src="https://unpkg.com/siriwave/dist/siriwave.umd.min.js"></script>
+
+    <!-- Texllate js -->
     <script src="assets/textillate/jquery.fittext.js"></script>
     <script src="assets/textillate/jquery.lettering.js"></script>
     <script src="http://jschr.github.io/textillate/jquery.textillate.js"></script>
     <!-- custom files -->
     <script src="main.js"></script>
-    <script type="text/javascript" src="/eel.js"></script>
+    <!-- <script type="text/javascript" src="/eel.js"></script> -->
   </body>
 </html>
