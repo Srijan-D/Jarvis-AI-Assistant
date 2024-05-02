@@ -7,5 +7,12 @@ $(document).ready(function () {
         $('.siri-message li:first').text(message);
         $('.siri-message').textillate('start');
     }
+    // Display home screen
+    eel.expose(ShowHome)
+    function ShowHome() {
+        $("#Oval").attr("hidden", false);
+        $("#SiriWave").attr("hidden", true);
+    }
+
 })
 

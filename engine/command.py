@@ -3,7 +3,7 @@ import speech_recognition as sr
 import eel
 
 def speak(text):
-    engine = pyttsx3.init()
+    engine = pyttsx3.init('sapi5')
     voices=engine.getProperty('voices')
     engine.setProperty('rate',174)
     engine.setProperty('voice',voices[1].id)
@@ -28,6 +28,7 @@ def takecommand():
         print(f"User said: {query}")
         eel.DisplayMessage(query)    
         speak(query)
+        eel.ShowHome()
     
     except Exception as e:
         print(e)
