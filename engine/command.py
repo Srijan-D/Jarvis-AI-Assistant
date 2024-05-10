@@ -19,13 +19,13 @@ def takecommand():
         eel.DisplayMessage("Listening...")
         r.pause_threshold=1 #Sets the amount of silence (in seconds) that will be considered as the end of a phrase.
         r.adjust_for_ambient_noise(source)#: Adjusts the recognizer sensitivity to the ambient noise.
-        
-        audio=r.listen(source,timeout=10,phrase_time_limit=6) #Listens for a single phrase, with a maximum wait time for speech (timeout) of 10 seconds and a maximum phrase length of 6 seconds.
+        audio=r.listen(source,timeout=4,phrase_time_limit=2) #Listens for a single phrase, with a maximum wait time for speech (timeout) of 10 seconds and a maximum phrase length of 6 seconds.
         
     try:
         print("Recognizing...")
         eel.DisplayMessage("Listening...")
         query=r.recognize_google(audio,language='en-in') #Attempts to recognize what was said using Google's speech recognition service.
+         
         print(f"User said: {query}")
         eel.DisplayMessage(query)    
         speak(query)
