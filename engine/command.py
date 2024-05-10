@@ -7,6 +7,7 @@ def speak(text):
     voices=engine.getProperty('voices')
     engine.setProperty('rate',174)
     engine.setProperty('voice',voices[1].id)
+    eel.DisplayMessage(text)
     engine.say(text)
     engine.runAndWait()
     
@@ -28,7 +29,6 @@ def takecommand():
         print(f"User said: {query}")
         eel.DisplayMessage(query)    
         speak(query)
-        eel.ShowHome()
     
     except Exception as e:
         print(e)
@@ -38,3 +38,20 @@ def takecommand():
     
     return query.lower()
 
+@eel.expose
+def allCommands():
+    query=takecommand()
+    print(query)
+    
+    # open feature in features.py
+    if "open" in query:
+        print("Opening "+query)
+        from engine.features import openCommand
+        openCommand(query)
+    elif "on youtube" in query:
+        from engine.features import playYoutube
+        playYoutube(query) 
+    else:
+        print("Not opening...")    
+    
+    eel.ShowHome()  
