@@ -44,5 +44,16 @@ $(document).ready(function () {
         eel.allCommands()
     })
 
+    function keyUp(e) {
+
+        if (e.key == 'j' && e.metaKey) { //metaKey is for command key in mac and windows key in windows
+            eel.playAssistantSound()
+            $("#oval").attr("hidden", true);
+            $("#SiriWave").attr("hidden", false);
+            eel.allCommands()
+        }
+    }
+    document.addEventListener('keyup', keyUp, false); //false is for bubbling means it will not go to parent element    
+
 });
 
