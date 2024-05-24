@@ -38,7 +38,7 @@ def openCommand(query):
             results=cursor.fetchall()
             
             if len(results) !=0:
-                speak("Opening "+app_name)
+                speak("Opening1 "+app_name)
                 os.startfile(results[0][0])
             
             elif len(results)==0:
@@ -47,11 +47,11 @@ def openCommand(query):
                 results=cursor.fetchall()
             
             if(len(results)!=0):
-                speak("Opening "+app_name)
+                speak("Opening2 "+app_name)
                 webbrowser.open(results[0][0])     
             
             else:
-                speak("Opening "+app_name)
+                speak("Opening3 "+app_name)
                 try:
                     os.system('start '+app_name)
                 except:
