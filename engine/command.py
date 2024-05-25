@@ -39,12 +39,16 @@ def takecommand():
     return query.lower()
 
 @eel.expose
-def allCommands():
-   
-    try:
+def allCommands(message=1):
+    
+    if message==1:
         query=takecommand()
         print(query)
         
+    else:
+        query=message    
+   
+    try:
         # open feature in features.py
         if "open" in query:
             print("Opening "+query)
@@ -65,7 +69,7 @@ def allCommands():
 
                 if "send message" in query:
                     flag = 'message'
-                    speak("what message to send")
+                    speak("what message would you like to send?")
                     query = takecommand()
                     
                 elif "phone call" in query:

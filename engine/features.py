@@ -107,7 +107,7 @@ def hotword():
 # find contacts
 def findContact(query):
     
-    words_to_remove = [ASSISTANT_NAME, 'make', 'a', 'to', 'phone', 'call', 'send', 'message', 'wahtsapp', 'video']
+    words_to_remove = [ASSISTANT_NAME, 'make', 'a', 'to', 'phone', 'call', 'send', 'message', 'whatsapp', 'video']
     query = remove_words(query, words_to_remove)
 
     try:
@@ -117,8 +117,8 @@ def findContact(query):
         print(results[0][0])
         mobile_number_str = str(results[0][0])
 
-        # if not mobile_number_str.startswith('+91'):
-        #     mobile_number_str = '+91' + mobile_number_str
+        if not mobile_number_str.startswith('+91'):
+            mobile_number_str = '+91' + mobile_number_str
 
         return mobile_number_str, query
     except:
