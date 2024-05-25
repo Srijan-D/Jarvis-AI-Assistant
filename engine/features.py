@@ -117,8 +117,8 @@ def findContact(query):
         print(results[0][0])
         mobile_number_str = str(results[0][0])
 
-        if not mobile_number_str.startswith('+91'):
-            mobile_number_str = '+91' + mobile_number_str
+        # if not mobile_number_str.startswith('+91'):
+        #     mobile_number_str = '+91' + mobile_number_str
 
         return mobile_number_str, query
     except:
@@ -126,7 +126,7 @@ def findContact(query):
         return 0, 0
 
 def whatsApp(mobile_no, message, flag, name):
-    
+    # flag is used to determine the type of messsage/voice call/video call
 
     if flag == 'message':
         target_tab = 12 
