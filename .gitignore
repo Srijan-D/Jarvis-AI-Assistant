@@ -6,3 +6,5 @@
 
 # Ignore all .csv files
 *.csv
+
+/engine/cookies.json

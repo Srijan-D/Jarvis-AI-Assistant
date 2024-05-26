@@ -3,12 +3,14 @@ import speech_recognition as sr
 import eel
 
 def speak(text):
+    text=str(text)
     engine = pyttsx3.init('sapi5')
     voices=engine.getProperty('voices')
     engine.setProperty('rate',174)
     engine.setProperty('voice',voices[1].id)
     eel.DisplayMessage(text)
     engine.say(text)
+    eel.receiverText(text) # text spoken by the assistant
     engine.runAndWait()
     
 @eel.expose
@@ -44,9 +46,12 @@ def allCommands(message=1):
     if message==1:
         query=takecommand()
         print(query)
+        eel.senderText(query)
+        # message from the user
         
     else:
         query=message    
+        eel.senderText(query)
    
     try:
         # open feature in features.py
@@ -74,14 +79,17 @@ def allCommands(message=1):
                     
                 elif "phone call" in query:
                     flag = 'call'
+                    
                 else:
                     flag = 'video call'
                     
                 whatsApp(contact_no, query, flag, name)     
             
         else:
-            print("Not opening...")    
+            print("Not opening passing to huggingface model")
+            from engine.features import chatBot
+            chatBot(query)
     except:
-        print("Error")       
-    
+        print("Error")    
+           
     eel.ShowHome()  

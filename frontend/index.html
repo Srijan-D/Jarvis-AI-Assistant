@@ -68,8 +68,14 @@
                   <button id="mic-btn" class="glow-on-hover">
                     <i class="bi bi-mic-fill"></i>
                   </button>
-                  <button id="chat-btn" class="glow-on-hover">
-                    <i class="bi bi-chat-fill"></i>
+                  <button
+                    id="chat-btn"
+                    class="glow-on-hover"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasScrolling"
+                    aria-controls="offcanvasScrolling"
+                  >
+                    <i class="bi bi-chat-dots"></i>
                   </button>
                   <button id="settings-btn" class="glow-on-hover">
                     <i class="bi bi-gear-fill"></i>
@@ -101,6 +107,33 @@
         </div>
       </section>
     </div>
+
+    <!-- chatbox history like microsoft copilot -->
+
+    <div
+      class="offcanvas offcanvas-start chat-canvas"
+      data-bs-scroll="true"
+      data-bs-backdrop="false"
+      tabindex="-1"
+      id="offcanvasScrolling"
+      aria-labelledby="offcanvasScrollingLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title text-white" id="offcanvasScrollingLabel">
+          Chats
+        </h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div id="chat-canvas-body" class="offcanvas-body">
+        <!-- Chatting code here -->
+      </div>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
     <script
