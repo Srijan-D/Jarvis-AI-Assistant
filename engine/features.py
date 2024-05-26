@@ -15,7 +15,10 @@ from engine.config import ASSISTANT_NAME
 import pywhatkit as kit
 import pvporcupine
 
+
 from engine.helper import extract_yt_term, remove_words
+from hugchat import hugchat
+
 
 con=sqlite3.connect('jarvis.db')
 cursor=con.cursor()
@@ -48,16 +51,18 @@ def openCommand(query):
                     'SELECT url FROM web_command WHERE name IN (?)', (app_name,))
                 results=cursor.fetchall()
             
-            if(len(results)!=0):
-                speak("Opening2 "+app_name)
-                webbrowser.open(results[0][0])     
-            
-            else:
-                speak("Opening3 "+app_name)
-                try:
-                    os.system('start '+app_name)
-                except:
-                    speak("Sorry, I am not able to open "+app_name)           
+                if(len(results)!=0):
+                    speak("Opening2 "+app_name)
+                    webbrowser.open(results[0][0])     
+                
+                else:
+                    speak("Opening3 "+app_name)
+                    
+                    try:
+                        os.system('start '+app_name)
+                    except:
+                        speak("Sorry, I am not able to open "+app_name)       
+                            
         except:
             speak("Something went wrong, please try again")    
 
@@ -169,4 +174,14 @@ def whatsApp(mobile_no, message, flag, name):
 
     pyautogui.hotkey('enter') # press enter to send the message
     speak(jarvis_message)
-    
+
+# Integrate hugging face chatbot 
+def chatBot(query):
+    user_input = query.lower()
+    chatbot = hugchat.ChatBot(cookie_path="engine\\cookies.json")
+    id = chatbot.new_conversation()
+    chatbot.change_conversation(id)
+    response =  chatbot.chat(user_input)
+    speak(response)
+    print(response)
+    return response    
