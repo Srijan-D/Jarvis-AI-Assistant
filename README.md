@@ -1,6 +1,6 @@
 # JARVIS AI Assistant
 
-JARVIS is an advanced AI assistant for PCs, powered by Meta's LLaMA3 and Mistral AI models using Hugging Face. It leverages cutting-edge voice recognition and text-to-speech technologies to perform various tasks with simple voice commands.
+JARVIS is an advanced AI assistant for PCs, powered by Meta's LLaMA3 and Mistral AI models using Hugging Face. It leverages cutting-edge voice recognition and text-to-speech technologiesalong with several python modules like pyautogui for automation of apps like whatsapp, pvporcupine for hotword detection, subprocess module for multithreading of processes etc. to perform various tasks with simple voice commands.
 
 ## Features
 
@@ -83,6 +83,7 @@ For authentication to Hugging Face via the `cookies.json` file, follow these ste
 ## Folder Structure
 Here's the folder structure for the JARVIS AI Assistant project:
 
+```plaintext
 JARVIS-AI-ASSISTANT/
 ├── engine/
 │   ├── __pycache__/
@@ -108,6 +109,7 @@ JARVIS-AI-ASSISTANT/
 ├── main.py
 ├── requirements.txt
 ├── run.py
+```
 
 ## Architecture
 
@@ -119,9 +121,11 @@ JARVIS-AI-ASSISTANT/
 ## Example Commands
 
 - "JARVIS, what's the weather today in Mumbai?"
-- "Send message to John: I'll be late today."
-- "Voice call Emily."
+- "Send message to Srijan: I'll be late today."
+- "Voice call Srijan."
+- "Video call Srijan."
 - "JARVIS, play the latest news on YouTube."
+- "JARVIS, play Counting stars by OneRepublic on YouTube."
 
 ## Contributing
   
