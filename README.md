@@ -1,6 +1,6 @@
 # JARVIS AI Assistant
 
-JARVIS is an advanced AI assistant for PCs, powered by Meta's LLaMA3 and Mistral AI models using Hugging Face. It leverages cutting-edge voice recognition and text-to-speech technologiesalong with several python modules like pyautogui for automation of apps like whatsapp, pvporcupine for hotword detection, subprocess module for multithreading of processes etc. to perform various tasks with simple voice commands.
+JARVIS is an advanced AI assistant for PCs, powered by Meta's [LLaMA3](https://llama.meta.com/llama3/) and Mistral AI models using Hugging Face. It leverages cutting-edge voice recognition and text-to-speech technologiesalong with several python modules like pyautogui for automation of apps like whatsapp, pvporcupine for hotword detection, subprocess module for multithreading of processes etc. to perform various tasks with simple voice commands.
 
 ## Features
 
@@ -120,15 +120,27 @@ JARVIS-AI-ASSISTANT/
 
 ## Example Commands
 
-- "JARVIS, what's the weather today in Mumbai?"
-- "Send message to Srijan: I'll be late today."
-- "Voice call Srijan."
+- "JARVIS, what's the weather today in Mumbai?" (usses llama3 model integrated using huggingface moudle hugchat)
+- "Send message to Srijan: I'll be late today." (Automatically sends message to that person on whatsapp)
+- "Voice call Srijan." (Searches for the username Srijan in the contacts file and starts video calling the person)
 - "Video call Srijan."
-- "JARVIS, play the latest news on YouTube."
+- "JARVIS, play the latest news on YouTube." (spins up a youtube video on default web browser of the system)
 - "JARVIS, play Counting stars by OneRepublic on YouTube."
 
 ## Contributing
   
 Feel free to fork this repository and contribute by submitting a pull request. For major changes, please open an issue to discuss what you would like to change.
 
+## Preview:
+Type or speak the prompt:
+![image](https://github.com/Srijan-D/Jarvis-AI-Assistant/assets/87586713/632d2286-6435-49f6-906e-6693059bb42f)
+
+![image](https://github.com/Srijan-D/Jarvis-AI-Assistant/assets/87586713/33adfdf5-2d0a-447e-83c7-223af6feb273)
+The it would automatically start playing the browser and start playing the video.
+
+Chatgpt like interface, using hugchat module to integrate [huggingface](https://huggingface.co/):
+model used as of now [Llama3](https://llama.meta.com/llama3/), the user has the ability to switch between the models by configuring settings interface or simply saying the it to JARVIS.
+
+Prompt: Explain string theory like I am 10
+![image](https://github.com/Srijan-D/Jarvis-AI-Assistant/assets/87586713/9ee19902-510e-4805-83d8-d7ecb8358777)
 
