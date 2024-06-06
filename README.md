@@ -136,10 +136,10 @@ Type or speak the prompt:
 ![image](https://github.com/Srijan-D/Jarvis-AI-Assistant/assets/87586713/632d2286-6435-49f6-906e-6693059bb42f)
 
 ![image](https://github.com/Srijan-D/Jarvis-AI-Assistant/assets/87586713/33adfdf5-2d0a-447e-83c7-223af6feb273)
-The it would automatically start playing the browser and start playing the video.
+The it would automatically start the browser and play video on youtube.
 
-Chatgpt like interface, using hugchat module to integrate [huggingface](https://huggingface.co/):
-model used as of now [Llama3](https://llama.meta.com/llama3/), the user has the ability to switch between the models by configuring settings interface or simply saying the it to JARVIS.
+Chatgpt like interface, using hugchat module to integrate [huggingface](https://huggingface.co/), 
+model used as of now is [Llama3](https://llama.meta.com/llama3/), the user has the ability to switch between the models by configuring settings interface or simply asking JARVIS to do it.
 
 Prompt: Explain string theory like I am 10
 ![image](https://github.com/Srijan-D/Jarvis-AI-Assistant/assets/87586713/9ee19902-510e-4805-83d8-d7ecb8358777)
